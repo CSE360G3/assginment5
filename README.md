@@ -1,7 +1,5 @@
 ### README
-This is the skeleton for image hosting and editing app called ImageSpace in Django Python. You can name your project anything you want.
-
-To continue your project on top of this, clone this code and do following. (Assumed python 2.7 is already installed)
+This is the skeleton for image hosting and editing app called ImageSpace in Django Python.
 
 ## To setup project
 
@@ -19,8 +17,6 @@ To continue your project on top of this, clone this code and do following. (Assu
 
 * Go to your web browser and open "http://localhost:8000"
 
-* You are ready to roll :)
-
 
 *The UI is built with twitter bootstrap, less and jquery*
 
@@ -32,7 +28,7 @@ The home page does nothing other than taking email and password. If you click on
 
 * run `python manage.py test image_space_app/tests`
 
-The source file for test is at image_space/image_space_app/tests folder.
+The source file for test is at image_space/image_space_app
 
 ## To run sample functional test
 
