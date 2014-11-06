@@ -44,11 +44,13 @@ class ImageSpaceTests(unittest.TestCase):
 
     def test6(self):
         """
-        sign up page
+        At sign up page
         """
         self.assertNotEqual(self.email,"")
         self.assertNotEqual(self.password,"")
         print "At the sign up page if the user leaves either email or password blank then prompt: This field is required"
+        self.assertNotEqual(self.email,"Johndoe")
+        print "At the sign up page if the user enter email address to sign up without @something.com then prompt error to enter the valid email address with @"
 
 
 
