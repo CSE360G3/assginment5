@@ -26,7 +26,7 @@ The home page does nothing other than taking email and password. If you click on
 
 ## To run sample unit test
 
-* run `python manage.py test image_space_app/tests`
+* run `python manage.py test image_space_app`
 
 The source file for test is at image_space/image_space_app
 
