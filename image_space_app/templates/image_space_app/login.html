@@ -1,0 +1,68 @@
+Skip to content
+ This repository
+Explore
+Gist
+Blog
+Help
+CSE360group3 CSE360group3
+ 
+3  Watch 
+  Star 0
+ Fork 2achasse/CSE360
+ branch: master  CSE360 / image_space_app / templates / image_space_app / login.html
+achasseachasse 19 days ago User registration and sign in now works
+1 contributor
+51 lines (44 sloc)  2.533 kb RawBlameHistory   
+{%extends "layouts/base.html" %}
+
+{% block content %}
+
+        <style>
+            body{
+                background-image: url("{{STATIC_URL}}img/photographer.jpg");
+            }
+            .container{
+                color: #fff;
+            }
+        </style>
+
+        <div class="container" style="margin-top:30px">
+                <div class="col-md-12">
+                    <div class="modal-dialog" style="margin-bottom:0">
+                        <div class="modal-content">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">Sign In</h3>
+                                        <p>Invalid Username/Password</p>
+                                    </div>
+                                    <form class="form-horizontal" name="LoginForm" action="/login/" method="post">
+                                    {% csrf_token %}
+                                    <div class="panel-body">
+                                            <fieldset>
+                                                <div class="form-group">
+                                                    <input class="form-control" placeholder="Username" name="username" type="username" autofocus="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                                    </label>
+                                                </div>
+                                                <!-- Change this to a button or input when using this as a form -->
+												<button class="btn btn-sm btn-success" type="submit">Login</button>
+                                                <a href="/register" class="btn btn-sm btn-success">Sign-Up</a>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+
+
+                </div>
+
+
+{% endblock %}
+Status API Training Shop Blog About
+© 2014 GitHub, Inc. Terms Privacy Security Contact
