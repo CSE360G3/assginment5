@@ -2,6 +2,7 @@ from lettuce import *
 from lxml import html
 from django.test.client import Client
 from nose.tools import assert_equals
+from django.http import HttpResponse
 
 @before.all
 def set_browser():
@@ -12,7 +13,7 @@ def access_url(step):
     #logout
     pass
 
-@step(r'I load the "(.*)" page')
+@step(r'I load "(.*)"')
 def access_url(step, url):
     url = "http://localhost:8000"
     response = world.browser.get(url)
@@ -23,10 +24,67 @@ def access_url(step, url):
     response = world.browser.get(url)
     world.dom = html.fromstring(response.content)
 
+@step(r'I press "(.*)" to go to sign-up page')
+def press_button(step, button):
+    #press button
+    pass
+
 @step(r'I fill in "(.*)" with "(.*)"')
 def fill_in(step, param, val):
     #fill value
     pass
+
+@step(r'I press "(.*)"')
+def press_button(step, button):
+    #press button
+    pass
+
+@step(r'I press "(.*)"')
+def press_button(step, button):
+    #press button
+    pass
+
+@step(r'I access the url "(.*)"')
+def access_url(step, url):
+    response = world.browser.get(url)
+    world.dom = html.fromstring(response.content)
+
+@step(r'I fill in "(.*)" with "(.*)"')
+def fill_in(step, param, val):
+    #fill value
+    pass
+
+@step(r'I press "(.*)"')
+def press_button(step, button):
+    #press button
+    pass
+
+@step(r'I press "(.*)"')
+def press_button(step, button):
+    #press button
+    pass
+
+
+@step(r'I press "(.*)"')
+def press_button(step, button):
+    #press button
+    pass
+
+@step(r'I press "(.*)"')
+def press_button(step, button):
+    #press button
+    pass
+
+@step(r'I press "(.*)"')
+def press_button(step, button):
+    #press button
+    pass
+
+
+@step(r'I see the pictures of "(.*)"')
+def see_picture(step, text):
+    picture = world.dom.cssselect('a.brand')
+    assert picture
 
 @step(r'I press "(.*)"')
 def press_button(step, button):
